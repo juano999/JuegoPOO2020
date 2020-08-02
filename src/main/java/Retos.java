@@ -10,8 +10,7 @@ public class Retos {
     }
     
     public void initRetos() {
-        this.retos.add(" ");
-        
+        this.retos.add(" ");        
         this.quantifier.add(0);
         String exercise[] = {"Sapitos", "Abdominales", "Sentadillas", "Flecciones de Pecho", "Burpees"};
         for(int i = 5; i <= 20; i += 5) {

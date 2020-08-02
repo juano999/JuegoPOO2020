@@ -7,9 +7,11 @@ public class Dados {
     private int dado2;
     private int sumaDados;
     
-
-
-    
+    public  Dados(){
+        this.dado1 =0;
+        this.dado2=0;
+        this.sumaDados=0;
+    }
 
     public void tirada() {
         int cont = 0;

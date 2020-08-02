@@ -1,10 +1,14 @@
 
+import java.util.ArrayList;
+
+
 public class Player {
     private String name;
     private String figura;
     private int cash;
     private int posicion;
     private int retosCumplidos;
+    public ArrayList<Integer> casillasCompradas;
 
     public Player(String name, String figura) {
         this.name = name;
@@ -12,6 +16,14 @@ public class Player {
         this.figura=figura;
         this.posicion=0;
         this.retosCumplidos=0;
+        this.casillasCompradas = new ArrayList<>();
+    }
+    
+    public void compra(int posicion) {
+        if (casillasCompradas.size() <= 20) {            
+            this.casillasCompradas.add(posicion);
+            System.out.println("Se compró la Casilla Nro. " + posicion);
+        }
     }
 
     public String getName() {
@@ -38,11 +50,11 @@ public class Player {
         this.cash += aumento;
     }
     public void disminuirCash(int decremento) {
-        if(this.cash >= decremento) {           
+        //if(this.cash >= decremento) {           
             this.cash -= decremento;
-        } else {
-            System.out.println("No tiene puntos");
-        }
+        //} /*else {
+            //System.out.println("No tiene puntos");
+        //}*/
     }
     
     public void cumpleReto(int puntos){
